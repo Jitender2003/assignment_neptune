@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma-1</title>
+    <!-- <link rel="stylesheet" href="../src/style.css" /> -->
+    <link rel="stylesheet" href="output.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    </style>
+  </head>
+
+  <body class="flex h-screen w-screen bg-[#f3f2f1]">
+    <!-- sidebar-content -->
+    <div class="side-bar h-full w-[22rem] bg-[#ffffff] flex flex-col justify-between items-center p-[2.2rem]">
+      <div class="sidebar-header flex flex-col w-[18.1rem] ">
+        <div class="logo h-[3rem] ">
+          <img src="assets/Union.svg" alt="logo" />
+        </div>
+        <div class="account-info h-[4.3rem] flex justify-between items-center border-[0.5px] border-[#b5bdcd] rounded-md p-3">
+          <div class="account-info-content  flex ">
+            <img src="assets/Group 79.svg" alt="logo"  />
+            <div class="account-info-text pl-3">
+              <h3 class="font-sapline text-[1rem] font-bold leading-[22.4px] text-[#2a2a2a]">Jessica Thompson</h3>
+              <h6 class="font-spline text-[12px] font-normal leading-[1rem] text-[#626d82]">Primary User</h6>
+            </div>
+          </div>
+          <div class="dropdown cursor-pointer ">
+            <img src="assets/Icon Right.svg" alt="dropdown " />
+          </div>
+        </div>
+        <div class="nav-bar ">
+          <ul class="nav-content pt-3">
+            <li class="flex h-[3.2rem] cursor-pointer items-center rounded-md p-3">
+              <img src="assets/home 1.svg" alt="home" />
+              <h6 class="font-spline text-[1rem] text-[#626d82] leading-3 pl-2">Home</h6>
+            </li>
+            <li class="flex h-[3.2rem] cursor-pointer items-center rounded-md p-3 bg-[#D3F7B5]">
+              <img src="assets/file-text 1.svg" alt="documents" />
+              <h6 class="font-spline text-[1rem] text-[#1f4451] leading-3 pl-2"><span>Documents</span></h6>
+            </li>
+            <li class="flex h-[3.2rem] cursor-pointer items-center rounded-md p-3">
+              <img src="assets/chat.svg" alt="chat" />
+              <h6 class="font-spline text-[1rem] text-[#626d82] leading-3 pl-2">Chat with Neptune</h6>
+            </li>
+            <li class="flex h-[3.2rem] cursor-pointer items-center rounded-md p-3">
+              <img src="assets/home 1.svg" alt="help" />
+              <h6 class="font-spline text-[1rem] text-[#626d82] leading-3 pl-2">Help</h6>
+            </li>
+            <li class="flex h-[3.2rem] cursor-pointer items-center rounded-md p-3">
+              <img src="assets/settings.svg" alt="settings" />
+              <h6 class="font-spline text-[1rem] text-[#626d82] leading-3 pl-2">Settings</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-info flex flex-col justify-around items-start h-[12rem] ">
+        <img class="h-[1.7rem]" src="assets/contact.svg" alt="phone" />
+        <p class="text-[#626d82] font-spline text-[1rem] ">
+          <b class="text-[#1f4451] text-[24px] font-medium leading-4">Having trouble?</b><br>
+          Feel free to contact us and we will always help you through the
+          process.
+        </p>
+        <button type="button" class="bg-[#1f4451] text-[#ffffff] text-[spline] w-[6rem] h-[2rem] rounded-md cursor-pointer ">Contact us</button>
+      </div>
+    </div>
+
+    <!-- main-content -->
+    <div class="content bg-[#F3F2F1] flex justify-center  h-full w-[calc(100%-22rem)]">
+      <div class="content-container w-[90%] pt-6">
+        <div class="header-content  h-[6rem] flex justify-between items-center pb-4">
+          <div class="header flex flex-col justify-between h-[90%] w-[18rem] ">
+            <div class="header-trail flex  items-center">
+              <p class="section text-[#436D7C] font-spline font-normal leading-[22.4px] text-[1rem] pr-2">Home</p>
+              <img class="pr-2" src="assets/next.svg" alt="next" />
+              <p class="sub-section text-[#b5bdcd]">Documents</p>
+            </div>
+            <div class="header-text text-[2rem] font-semibold leading-[39.27px] text-[#2a2a2a]">
+              <span>My Documents</span>
+            </div>
+          </div>
+  
+          <div class="search-bar relative h-[47px] w-[300px] mt-[51px] mb-[31px]">
+            <input class=" h-full w-full border-[0.5px] border-[#b5bdcd] rounded-[5px] placeholder-[#b5bdcd] text-[1rem] font-normal leading-[22.4px] pl-1" type="text" placeholder="Search documents" />
+            <button class=" search-btn absolute right-[15px] top-[50%] transform -translate-y-1/2  border-none bg-none cursor-pointer">
+              <img class="" src="assets/search.svg" alt="search-icon" />
+            </button>
+          </div> 
+        </div>
+  
+        <div class="main-content bg-[#ffffff] border-[0.5px] border-[#b5bdcd] rounded-[8px]">
+          <table class="documents-table border-collapse">
+            <thead class="h-[56px]">
+              <tr>
+                <th class="checkbox-thead">
+                  <input type="checkbox" />
+                  <img src="assets/Icon Right.svg" alt="dropdown" />
+                </th>
+                <th class="doc-name-thead"><span>Document Name</span></th>
+                <th class="doc-status-thead"><span>Status</span></th>
+                <th class="doc-modification-thead"><span>Last Modified</span></th>
+                <th class="doc-action-thead"></th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td><span class="status needs-signing">Needs Signing</span></td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Sign now</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td class="stat-pending">
+                  <span class="status pending">Pending</span>
+                  <span class="status waiting"
+                    ><span>Waiting for</span> 1 person</span
+                  >
+                </td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Sign now</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td class="stat-pending">
+                  <span class="status pending">Pending</span>
+                  <span class="status waiting"
+                    ><span>Waiting for</span> 2 person</span
+                  >
+                </td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Sign now</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Download PDF</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Download PDF</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+  
+              <tr>
+                <td class="checkbox"><input type="checkbox" /></td>
+                <td class="doc-name">Title of Document Goes Here</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
+                <td class="action">
+                  <button class="action-btn">Download PDF</button>
+                  <img src="assets/options.svg" alt="options" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
