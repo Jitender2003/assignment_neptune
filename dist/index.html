@@ -70,8 +70,8 @@
 
     <!-- main-content -->
     <div class="content bg-[#F3F2F1] flex justify-center  h-full w-[calc(100%-22rem)]">
-      <div class="content-container w-[90%] pt-6">
-        <div class="header-content  h-[6rem] flex justify-between items-center pb-4">
+      <div class="content-container w-[90%] pt-6 flex flex-col gap-1 ">
+        <div class="header-content  h-[6rem] flex justify-between items-center pb-5">
           <div class="header flex flex-col justify-between h-[90%] w-[18rem] ">
             <div class="header-trail flex  items-center">
               <p class="section text-[#436D7C] font-spline font-normal leading-[22.4px] text-[1rem] pr-2">Home</p>
@@ -79,7 +79,7 @@
               <p class="sub-section text-[#b5bdcd]">Documents</p>
             </div>
             <div class="header-text text-[2rem] font-semibold leading-[39.27px] text-[#2a2a2a]">
-              <span>My Documents</span>
+              <span class="font-serif font-semibold pt-1">My Documents</span>
             </div>
           </div>
   
@@ -91,95 +91,97 @@
           </div> 
         </div>
   
-        <div class="main-content bg-[#ffffff] border-[0.5px] border-[#b5bdcd] rounded-[8px]">
-          <table class="documents-table border-collapse">
-            <thead class="h-[56px]">
-              <tr>
-                <th class="checkbox-thead">
-                  <input type="checkbox" />
-                  <img src="assets/Icon Right.svg" alt="dropdown" />
+        <div class="main-content bg-[#ffffff] border-[0.5px] border-[#b5bdcd] rounded-[8px] h-auto">
+          <table class="documents-table border-collapse w-full">
+
+            <thead class="h-[56px] ">
+              <tr class=" text-left ">
+                <th class="checkbox-thead flex h-[56px] justify-center  w-auto ">
+                  <div class="checkbox-thead-content flex justify-center  items-center gap-1"><input type="checkbox" class="cursor-pointer" />
+                    <img src="assets/Icon Right.svg" alt="dropdown"  class="h-[14px] w-[14px] "/></div>
                 </th>
-                <th class="doc-name-thead"><span>Document Name</span></th>
-                <th class="doc-status-thead"><span>Status</span></th>
-                <th class="doc-modification-thead"><span>Last Modified</span></th>
+                <th class="doc-name-thead "><span class="font-spline text-[1rem] font-semibold leading-[22.4px] text-[#2a2a2a]">Document Name</span></th>
+                <th class="doc-status-thead"><span class="font-spline text-[1rem] font-semibold leading-[22.4px] text-[#2a2a2a]">Status</span></th>
+                <th class="doc-modification-thead"><span class="font-spline text-[1rem] font-semibold leading-[22.4px] text-[#2a2a2a]">Last Modified</span></th>
                 <th class="doc-action-thead"></th>
               </tr>
             </thead>
   
             <tbody>
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
-                <td><span class="status needs-signing">Needs Signing</span></td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Sign now</button>
-                  <img src="assets/options.svg" alt="options" />
+              <tr class="h-[4rem] ">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
+                <td><span class="status needs-signing font-inter text-[15px]  text-center leading-[18.15px]  w-[139px] h-[26px] rounded-[22px] bg-[#436d7c] flex justify-center items-center text-white font-medium pt-2
+                  pb-2">Needs Signing</span></td>
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Sign Now</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
   
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
+              <tr class="h-[4rem]">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
                 <td class="stat-pending">
-                  <span class="status pending">Pending</span>
-                  <span class="status waiting"
-                    ><span>Waiting for</span> 1 person</span
+                  <span class="status pending font-inter text-[15px] font-medium text-center leading-[18.15px] text-[#626d82] w-[85px] h-[26px] rounded-[22px] bg-[#e8ecf1] flex items-center justify-center">Pending</span>
+                  <span class="status waiting block text-left italic"
+                    ><span class="text-[#b5bdcd]">Waiting for</span> 1 person</span
                   >
                 </td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Sign now</button>
-                  <img src="assets/options.svg" alt="options" />
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Sign Now</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
   
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
+              <tr class="h-[4rem]">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
                 <td class="stat-pending">
-                  <span class="status pending">Pending</span>
-                  <span class="status waiting"
-                    ><span>Waiting for</span> 2 person</span
+                  <span class="status pending font-inter text-[15px] font-medium text-center leading-[18.15px] text-[#626d82] w-[85px] h-[26px] rounded-[22px] bg-[#e8ecf1] flex items-center justify-center">Pending</span>
+                  <span class="status waiting block text-left italic"
+                    ><span class="text-[#b5bdcd]">Waiting for</span> 2 person</span
                   >
                 </td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Sign now</button>
-                  <img src="assets/options.svg" alt="options" />
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Sign Now</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
   
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
-                <td><span class="status completed">Completed</span></td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Download PDF</button>
-                  <img src="assets/options.svg" alt="options" />
+              <tr class="h-[4rem]">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
+                <td><span class="status completed status font-inter text-[15px] font-medium text-center leading-[18.15px]  w-[105px] h-[26px] rounded-[22px] bg-[#d3f7b5] text-[#1f4451] px-[11px] py-[6px] flex items-center justify-center">Completed</span></td>
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Download PDF</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
   
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
-                <td><span class="status completed">Completed</span></td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Download PDF</button>
-                  <img src="assets/options.svg" alt="options" />
+              <tr class="h-[4rem]">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
+                <td><span class="status completed status font-inter text-[15px] font-medium text-center leading-[18.15px]  w-[105px] h-[26px] rounded-[22px] bg-[#d3f7b5] text-[#1f4451] px-[11px] py-[6px] flex items-center justify-center">Completed</span></td>
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Download PDF</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
   
-              <tr>
-                <td class="checkbox"><input type="checkbox" /></td>
-                <td class="doc-name">Title of Document Goes Here</td>
-                <td><span class="status completed">Completed</span></td>
-                <td class="date"><span>10/22/2024</span><span>2:01 pm</span></td>
-                <td class="action">
-                  <button class="action-btn">Download PDF</button>
-                  <img src="assets/options.svg" alt="options" />
+              <tr class="h-[4rem]">
+                <td class="checkbox text-center"><input class="cursor-pointer" type="checkbox" /></td>
+                <td class="doc-name font-spline text-[1rem] font-semibold leading-[22.4px]  text-[#436d7c]">Title of Document Goes Here</td>
+                <td><span class="status completed status font-inter text-[15px] font-medium text-center leading-[18.15px]  w-[105px] h-[26px] rounded-[22px] bg-[#d3f7b5] text-[#1f4451] px-[11px] py-[6px] flex items-center justify-center">Completed</span></td>
+                <td class="date flex flex-col justify-center items-start h-[4rem]"><span class="font-inter text-[#626d82] text-[1rem] font-medium leading-[19.3px]">10/22/2024</span><span class="font-inter text-[#626d82] text-[1rem] font-medium  leading-[19.3px]">2:01 pm</span></td>
+                <td class="action relative ">
+                  <button class="h-[34px] w-[134px] border border-[#b5bdcd] rounded-[5px] mr-[15px] bg-white font-inter font-medium text-[14px] text-[#626d82] leading-[16.94px] cursor-pointer">Download PDF</button>
+                  <img class="absolute h-[16px] w-[4px] top-1/2 transform -translate-y-1/2 left-40"  src="assets/options.svg" alt="options" />
                 </td>
               </tr>
             </tbody>

@@ -333,7 +333,7 @@ body {
   font-family: "Spline Sans", serif;
   font-size: 16px;
   font-weight: 600;
-  line-height: 22.4px;
+  line-height: 22.  4px;
   color: #2a2a2a;
 }
 
@@ -459,7 +459,6 @@ tbody tr {
   position: absolute;
   height: 16px;
   width: 4px;
-  /* background-color: yellowgreen; */
   top: 50%;
   transform: translateY(-50%);
 }
